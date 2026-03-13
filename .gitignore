@@ -1,0 +1,13 @@
+# Large data files and local datasets
+data/raw/acs/
+data/raw/gss/
+data/raw/pew/
+data/interim/**
+data/processed/**
+data/versions/**
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/versions/.gitkeep
