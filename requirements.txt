@@ -1,0 +1,17 @@
+# Requires Python >= 3.10
+
+pandas
+numpy
+pyarrow
+scikit-learn
+kmodes
+prince
+pyreadstat
+matplotlib
+seaborn
+jupyter
+notebook
+ipykernel
+python-dotenv
+anthropic
+tqdm
