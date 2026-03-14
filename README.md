@@ -286,12 +286,13 @@ us-audience-segmentation
 1. Download the required datasets from the links above.
 
 2. Place them in the following directory structure:
-
+```
 data/
 └── raw/
     ├── acs/
     ├── gss/
     └── pew/
+```
 
 3. Install project dependencies:
 
