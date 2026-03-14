@@ -138,17 +138,7 @@ These behaviors are projected onto the synthetic population to create a **media 
 
 The project follows an end-to-end analytical pipeline implemented in Jupyter notebooks.
 
-ACS Demographics
-↓
-Structural Population Model
-↓
-Clustering
-↓
-Psychological Inference (GSS)
-↓
-Media Behavior Projection (Pew)
-↓
-Audience Segment Cards
+ACS Demographics -> Structural Population Model ->Clustering -> Psychological Inference (GSS)->Media Behavior Projection (Pew)->Audience Segment Cards
 
 ### 01 — ACS Ingestion
 
@@ -297,10 +287,11 @@ us-audience-segmentation
 
 2. Place them in the following directory structure:
 
-data/raw/
-├── acs/
-├── gss/
-└── pew/
+data/
+└── raw/
+    ├── acs/
+    ├── gss/
+    └── pew/
 
 3. Install project dependencies:
 
