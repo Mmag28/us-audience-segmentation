@@ -1,16 +1,13 @@
 # ============================================================
-
 # Python
-
 # ============================================================
 
-**pycache**/
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
 
 # Distribution / packaging
-
 .Python
 build/
 dist/
@@ -29,9 +26,7 @@ pip-wheel-metadata/
 *.egg
 
 # ============================================================
-
 # Virtual environments
-
 # ============================================================
 
 venv/
@@ -41,17 +36,13 @@ ENV/
 virtualenv/
 
 # ============================================================
-
 # Jupyter notebooks
-
 # ============================================================
 
 .ipynb_checkpoints/
 
 # ============================================================
-
 # Environment variables / secrets
-
 # ============================================================
 
 .env
@@ -59,9 +50,7 @@ virtualenv/
 *.env
 
 # ============================================================
-
 # OS files
-
 # ============================================================
 
 .DS_Store
@@ -69,11 +58,12 @@ virtualenv/
 Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+.AppleDouble
+.LSOverride
+Icon?
 
 # ============================================================
-
 # IDEs and editors
-
 # ============================================================
 
 .vscode/
@@ -83,18 +73,14 @@ $RECYCLE.BIN/
 *.swn
 
 # ============================================================
-
 # Logs
-
 # ============================================================
 
 *.log
 logs/
 
 # ============================================================
-
 # Model artifacts
-
 # ============================================================
 
 *.joblib
@@ -103,56 +89,74 @@ logs/
 *.model
 *.onnx
 
-models/
+# Ignore model contents but keep folder structure if needed
+models/**
+!models/
+!models/.gitkeep
+!models/clustering/
+!models/clustering/.gitkeep
+
 checkpoints/
 
 # ============================================================
-
-# Data outputs
-
+# Data directories
 # ============================================================
 
-data/raw/
-data/interim/
-data/processed/
-data/external/
+# Ignore generated / local data contents
+data/**
+!data/
+!data/raw/
+!data/interim/
+!data/processed/
+!data/external/
+!data/versions/
 
-# Keep folder structure but ignore contents
-
+# Keep folder placeholders
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 !data/external/.gitkeep
+!data/versions/.gitkeep
 
 # ============================================================
+# Outputs
+# ============================================================
 
-# Large data files
+# Ignore generated outputs by default
+outputs/**
+!outputs/
+!outputs/figures/
+!outputs/tables/
 
+# Keep folder placeholders
+!outputs/figures/.gitkeep
+!outputs/tables/.gitkeep
+
+# Keep one small example output visible
+!outputs/tables/11_us_audience_segments_v1.csv
+
+# ============================================================
+# Large binary / data artifacts
 # ============================================================
 
 *.parquet
 *.feather
 *.h5
 *.hdf5
-*.csv
-*.tsv
-*.xlsx
+
+# Re-allow the example output if needed later
+!outputs/tables/11_us_audience_segments_v1.csv
 
 # ============================================================
-
-# Experiment outputs
-
+# Reports / temp outputs
 # ============================================================
 
-outputs/
 results/
 reports/
 figures/
 
 # ============================================================
-
 # Temporary files
-
 # ============================================================
 
 *.tmp
@@ -161,19 +165,7 @@ figures/
 *.old
 
 # ============================================================
-
-# Mac / Linux artifacts
-
-# ============================================================
-
-.AppleDouble
-.LSOverride
-Icon?
-
-# ============================================================
-
 # Pytest / coverage
-
 # ============================================================
 
 .pytest_cache/
@@ -182,33 +174,20 @@ coverage.xml
 htmlcov/
 
 # ============================================================
-
-# MyPy
-
+# Type-check / lint caches
 # ============================================================
 
 .mypy_cache/
-
-# ============================================================
-
-# Ruff / lint caches
-
-# ============================================================
-
 .ruff_cache/
 
 # ============================================================
-
 # Streamlit / local apps
-
 # ============================================================
 
 .streamlit/
 
 # ============================================================
-
 # Misc
-
 # ============================================================
 
 *.sqlite
